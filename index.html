@@ -23,21 +23,21 @@
             padding: 0;
         }
 
-        body {
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            padding: 6rem 2rem;
-            min-height: 100vh;
-            
-            /* High-performance background setup */
-            background-image: url('Background.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps canvas static while text scrolls over it */
-            background-color: #f5f4ef; /* Fallback cream color */
-        }
+body {
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    
+    /* High-performance natural scrolling background */
+    background-image: url('Background.jpg');
+    background-size: auto;             /* Keeps the texture sharp and pixel-perfect */
+    background-position: top center;
+    background-repeat: repeat-y;       /* Repeats the canvas smoothly if the text gets long */
+    background-attachment: scroll;     /* Forces the image to scroll WITH the text */
+    background-color: #f5f4ef;         /* Fallback matching tone */
+}
 
         .container {
             max-width: 750px;
