@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #fcfbfa;
+            --bg-main: #f7f6f2;
             --bg-card: #ffffff;
-            --text-main: #222222;
-            --text-muted: #666666;
-            --accent: #b59469;
-            --border: #eae6e1;
+            --text-main: #1c2017;
+            --text-muted: #606142;
+            --accent: #9f926d;
+            --border: #e3e0d5;
         }
 
         * {
@@ -25,6 +25,8 @@
 
         body {
             background-color: var(--bg-main);
+            /* SVG Textured Background Overlay mimicking fine grain paper */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
             color: var(--text-main);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
@@ -102,13 +104,14 @@
             border: 1px solid var(--border);
             padding: 2rem;
             border-radius: 4px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 24px rgba(28, 32, 23, 0.02);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(181, 148, 105, 0.08);
+            box-shadow: 0 6px 24px rgba(159, 146, 109, 0.1);
+            border-color: var(--accent);
         }
 
         .card h3 {
@@ -182,4 +185,21 @@
             </div>
         </section>
 
-        <section
+        <section id="expertise">
+            <h2>Technical Execution</h2>
+            <div class="card">
+                <p>Core focus on transforming manual, disorganized processes into clean, scalable backend infrastructure.</p>
+                <div class="tag-container">
+                    <span class="tag">Salesforce Administration</span>
+                    <span class="tag">Workflow Automation</span>
+                    <span class="tag">Data Logic</span>
+                    <span class="tag">Database Reporting</span>
+                    <span class="tag">File Architecture</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
